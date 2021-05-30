@@ -11,6 +11,7 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -43,14 +44,22 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+        // 路由管理
         'urlManager' => [
+            // 美化路由
             'enablePrettyUrl' => true,
+            // 隐藏入口文件
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+
+    ],
+    'modules'=>[
+        //管理员
+        'spuser'=>[
+            'class'=>'app\modules\user\Module'
+        ]
     ],
     'params' => $params,
 ];
