@@ -102,6 +102,9 @@ class IndexController extends BaseController
 
     public function actionUpdate()
     {
+        $ww = [1=>1,3=>'w'];
+        $a = array_sum($ww);
+        print_r($a);die;
         // 修改
     }
 
